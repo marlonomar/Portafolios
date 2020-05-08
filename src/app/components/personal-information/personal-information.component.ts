@@ -41,9 +41,8 @@ export class PersonalInformationComponent implements OnInit {
       this.data = resp;
 
       //information
-      this.location = this.data.currentJob.location;
+      this.location = 'Recife / Brazil'
       this.name = this.data.user.name;
-
       //site 
       this.selectLanguages = this.data.site.components.selectLanguages;
       this.spanish = this.data.site.languages.spanish;
