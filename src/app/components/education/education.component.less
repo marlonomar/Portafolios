@@ -1,0 +1,56 @@
+.education{
+    .education-list{
+        padding: 0;
+        
+        .education-item{
+            margin-bottom: 30px;
+            &:nth-child(1n +4){
+                display: none;
+            }
+
+            .title{
+                color: white;
+                font-size: 20px;
+            }
+
+            .data{
+                color: #1b51a3;
+                font-weight: 700;
+            }
+
+            .platform{
+                font-size: 20px;
+                color: #9e9e9e;
+                font-weight: 700;
+            }
+
+            .certificado{
+                background: #314b85;
+                color: #fff;
+                border-radius: 12px;
+                padding: 8px 14px;
+                font-weight: 500;
+
+                &:hover{
+                    background:#223766;
+                }
+            }
+        }
+    }
+
+    .seemore{
+        text-align: center;
+        .seemore-button{
+            color: white;
+            font-size: 19px;
+            cursor: pointer;
+            font-weight: 500;
+            &:hover{
+                color: #868181;
+            }
+            .fas{
+                margin-left: 5px;
+            }
+        }
+    }
+}

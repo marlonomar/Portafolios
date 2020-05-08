@@ -1,0 +1,99 @@
+
+.language{
+
+    .title{
+        color: #9d9696;
+    }
+
+    .language-list{
+        padding:0;
+        list-style: none;
+        .language-item{
+            display: inline-block;
+            width: 30%;
+            @media screen and (max-width: 500px){
+                width: 100%;
+            }
+            .language-content-item{
+                .progress-value{
+                    visibility: hidden;
+                }
+                
+                .progress-circle{
+                    width: 122px;
+                    height: 122px;
+                    position: relative;
+                    display: table;
+                    margin: auto;
+                    .flag{
+                        display: inline-block;
+                        position: absolute;
+                        width: 90px;
+                        left: 16px;
+                        border-radius: 50%;
+                        text-align: center;
+                        top: 15px;
+                        height: 90px;
+                        overflow: hidden;
+            
+                        img{
+                            width: 104%;
+                            height: 104%;
+                            position: relative;
+                            left: -2px;
+                            top: -2px;
+                        }
+                    }
+                    
+                    .progress-ring{
+                        display: table;
+                        margin: auto;
+                        .progress-ring__circle {
+                            transition: 0.35s stroke-dashoffset;
+                            transform: rotate(-90deg);
+                            transform-origin: 50% 50%;
+                            stroke :rgb(15, 160, 206);
+                        }
+                    }  
+                }
+            
+                .espanha{
+                    circle{
+                        stroke :rgb(253, 7, 7) !important;  
+                    }
+                }
+            
+                .brazil{
+                    circle{
+                        stroke :#0fce27 !important;  
+                    }
+                }
+            
+                .eeuu{
+                    circle{
+                        stroke :#0797fd !important;  
+                    }
+                }
+            }
+
+            .title{
+                text-align: center;
+            }
+
+            .level{
+                .progress-name{
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #979797;
+                }
+            }
+        }
+    }
+
+}
+
+.custom{
+    list-style:none;
+    padding:0;
+}

@@ -1,0 +1,29 @@
+<div class="language">
+
+    <h2 class="title">
+        {{title}}
+    </h2>
+
+    <ul class="language-list">
+        <li *ngFor="let language of lenguaje"   class="language-item" >
+            <div class="language-content-item">
+                <div class="progress-circle {{language.country}}">
+                    <div class="flag">
+                        <img src="{{language.flag}}">
+                    </div>
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring__circle " stroke-width="6" fill="transparent" r="52" cx="60" cy="60"/>
+                    </svg>
+                  <input value="{{language.percentage}}" type="number" step="5" min="0" max="100" placeholder="progress" class="progress-value" >
+                </div>
+                <h3 class="title">{{language.title}}</h3>
+                <div class="level">
+                    <p class="progress-name" *ngIf="language.percentage > 90"> {{native}}</p>
+                    <p class="progress-name" *ngIf="language.percentage > 70 &&  language.percentage <= 89"> {{Advanced}}</p>
+                    <p class="progress-name" *ngIf="language.percentage >= 50 && language.percentage <= 70"> {{Intermediate}}</p>
+                    <p class="progress-name" *ngIf="language.percentage < 50"> {{Beginner}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

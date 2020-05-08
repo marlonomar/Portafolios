@@ -1,0 +1,90 @@
+<div class="abilities">
+  
+<ul class="category-list">
+  <li class="category-item" value="frontend" >frontend</li>
+  <li class="category-item" value="framework" >framework</li>
+  <li class="category-item" value="Backend" >Backend</li>
+  <li class="category-item acronimo" value="cms" >cms</li>
+  <li class="category-item" value="dataBase" >dataBase</li>
+  <li class="category-item" value="all" >{{allFiltes}}</li>
+
+</ul>
+<div class="abilities">
+  <ul class="abilities-list">
+      <li *ngFor="let tecnology of abilities" class="abilities-item {{tecnology.category}}" > 
+
+          <div class="maincontainer">
+
+              <div class="thecard ">
+        
+                <div class="thefront">
+                    <h4 class="title">{{tecnology.name}}</h4>
+                    <div class="contain-picture">
+                      <img src="{{tecnology.picture}}" alt="{{tecnology.name}}" class="tecnology-picture" loading="lazy">
+                    </div>
+                    <div class="progress-circle">
+                      <div class="level">
+                          <span class="progress-name" *ngIf="tecnology.study > 67">{{Advanced}}</span>
+                          <span class="progress-name" *ngIf="tecnology.study >= 34 && tecnology.study <= 66">{{Intermediate}}</span>
+                          <span class="progress-name" *ngIf="tecnology.study < 33">{{Beginner}}</span>
+                      </div>
+                      <svg class="progress-ring" width="120" height="120"> 
+                          <circle class="progress-ring__circle" stroke-width="6" fill="transparent" r="52" cx="60" cy="60"/>
+                      </svg>
+                    <input value="{{tecnology.study}}" type="number" step="5" min="0" max="100" placeholder="progress" class="progress-value" >
+                    </div>
+                  </div>
+        
+                <div class="theback" *ngIf = "language == 'es-ES' " >
+                  <h4 class="title">{{tecnology.name}} <span><img src="{{tecnology.picture}}" class="icone"></span> </h4>
+                  <p class="description" *ngIf="tecnology.study > 91">Domino de una manera bastante profesional {{tecnology.name}}, llegando a crear multiples proyectos usado esta tecnologia.</p>
+                  <p class="description" *ngIf="tecnology.study >= 81 && tecnology.study <= 90">Tengo un conocimiento bastante avanzado en {{tecnology.name}}, ya que forma parte de mi dia a dia como desarrolador web. </p>
+                  <p class="description" *ngIf="tecnology.study >= 71 && tecnology.study <= 80">Pude hacer uso de {{tecnology.name}} en proyectos donde fue de bastante utilidad.</p>
+                  <p class="description" *ngIf="tecnology.study >= 61 && tecnology.study <= 70">Desde hace ya un tiempo trabajo con {{tecnology.name}} y ya es habitual para mi usarla y aun puedo aprender cosas nuevas de ella.</p>
+                  <p class="description" *ngIf="tecnology.study >= 51 && tecnology.study <= 60">{{tecnology.name}} ya es conocida para mi , he hecho bastante uso de ella y la puedo dominar de buena manera, aun puedo mejorar.</p>
+                  <p class="description" *ngIf="tecnology.study >= 41 && tecnology.study <= 50">He usado moderadamente {{tecnology.name}}, ya conozco sus fundamentos y puedo manejarla con algo de dificultad. </p>
+                  <p class="description" *ngIf="tecnology.study >= 31 && tecnology.study <= 40">Ya usando varias veces {{tecnology.name}}, la encuentro muy interesante y quiero usarla mas para aumentar mis conocimientos.</p>
+                  <p class="description" *ngIf="tecnology.study >= 21 && tecnology.study <= 30">Es poco lo que he usado {{tecnology.name}}, la encuento bastante util y funcional para espero seguir estudiando  y mejorar mi manejo de ella.</p>
+                  <p class="description" *ngIf="tecnology.study >= 10 && tecnology.study <= 20">Estoy dando mis primeros pasos con {{tecnology.name}}, la he usado poco pero se que a futuro sera de utilidad para desarrolar mejores proyectos.</p>
+                  <p class="description" *ngIf="tecnology.study < 10">He visto poco de {{tecnology.name}}, tengo curiosidad por seguir aprendiendo mas y poder usarla mas adelante.</p>
+                </div>
+
+                <div class="theback" *ngIf = "language == 'pt-BR' " >
+                  <h4 class="title">{{tecnology.name}} <span><img src="{{tecnology.picture}}" class="icone"></span> </h4>
+                  <p class="description" *ngIf="tecnology.study > 91">Domino de uma maneira muito profissional {{tecnology.name}}, criando vários projetos usando essa tecnologia.</p>
+                  <p class="description" *ngIf="tecnology.study >= 81 && tecnology.study <= 90">Eu tenho um conhecimento bastante avançado de {{tecnology.name}}, pois faz parte do meu dia a dia como desenvolvedor web.</p>
+                  <p class="description" *ngIf="tecnology.study >= 71 && tecnology.study <= 80">Consegui usar o {{tecnology.name}} em projetos nos quais era bastante útil.</p>
+                  <p class="description" *ngIf="tecnology.study >= 61 && tecnology.study <= 70">Há algum tempo que trabalho com o {{tecnology.name}} e é habitual usá-lo e ainda posso aprender coisas novas com ele.</p>
+                  <p class="description" *ngIf="tecnology.study >= 51 && tecnology.study <= 60">O {{tecnology.name}} já é conhecido por mim, usei o suficiente e posso dominá-lo de uma maneira boa, ainda posso melhorar.</p>
+                  <p class="description" *ngIf="tecnology.study >= 41 && tecnology.study <= 50">Eu usei moderadamente o {{tecnology.name}}, já sei o básico e posso lidar com isso com alguma dificuldade.</p>
+                  <p class="description" *ngIf="tecnology.study >= 31 && tecnology.study <= 40">Já usando o {{tecnology.name}} várias vezes, acho muito interessante e quero usá-lo mais para aumentar meu conhecimento.</p>
+                  <p class="description" *ngIf="tecnology.study >= 21 && tecnology.study <= 30">Eu usei pouco {{tecnology.name}}, acho-o bastante útil e funcional, por isso espero continuar estudando e melhorando meu conhecimento.</p>
+                  <p class="description" *ngIf="tecnology.study >= 10 && tecnology.study <= 20">Estou dando os primeiros passos com o {{tecnology.name}}, usei pouco, mas sei que no futuro será útil desenvolver melhores projetos.</p>
+                  <p class="description" *ngIf="tecnology.study < 10">Eu tenho visto pouco de {{tecnology.name}}, estou curioso para continuar aprendendo mais e poder usá-lo mais tarde.</p>
+                </div>
+
+                <div class="theback" *ngIf = "language == 'en-US' " >
+                  <h4 class="title">{{tecnology.name}} <span><img src="{{tecnology.picture}}" class="icone"></span> </h4>
+                  <p class="description" *ngIf="tecnology.study > 91">I dominate in a very professional way {{tecnology.name}}, creating multiple projects using this technology.</p>
+                  <p class="description" *ngIf="tecnology.study >= 81 && tecnology.study <= 90">I have a fairly advanced knowledge of {{tecnology.name}}, since it is part of my daily life as a web developer.</p>
+                  <p class="description" *ngIf="tecnology.study >= 71 && tecnology.study <= 80">I was able to use {{tecnology.name}} in projects where it was quite useful.</p>
+                  <p class="description" *ngIf="tecnology.study >= 61 && tecnology.study <= 70">For some time now I have been working with {{tecnology.name}} and it is habitual for me to use it and I can still learn new things from it.</p>
+                  <p class="description" *ngIf="tecnology.study >= 51 && tecnology.study <= 60">{{tecnology.name}} is already known to me, I have made enough use of it and I can master it in a good way, I can still improve.</p>
+                  <p class="description" *ngIf="tecnology.study >= 41 && tecnology.study <= 50">I have used moderately {{tecnology.name}}, I already know its basics and can handle it with some difficulty.</p>
+                  <p class="description" *ngIf="tecnology.study >= 31 && tecnology.study <= 40">Already using {{tecnology.name}} several times, I find it very interesting and I want to use it more to increase my knowledge.</p>
+                  <p class="description" *ngIf="tecnology.study >= 21 && tecnology.study <= 30">I have used little {{tecnology.name}}, I find it quite useful and functional so I hope to continue studying and improve my handling of it.</p>
+                  <p class="description" *ngIf="tecnology.study >= 10 && tecnology.study <= 20">I am taking my first steps with {{tecnology.name}}, I have used it little but I know that in the future it will be useful to develop better projects.</p>
+                  <p class="description" *ngIf="tecnology.study < 10">I have seen little of {{tecnology.name}}, I am curious to continue learning more and to be able to use it later.</p>
+                </div>
+
+              </div>
+            </div>
+      </li>
+  </ul>
+</div>
+<div class="arrow">
+  <i class="fas fa-arrow-alt-circle-down down"></i>
+  <i class="fas fa-arrow-alt-circle-up up"></i>
+</div>
+
+</div>

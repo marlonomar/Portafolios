@@ -1,0 +1,12 @@
+<div class="my-proyects">
+    <ul class="my-proyects-list">
+        <li class="my-proyects-item" *ngFor="let site of proyects">
+           <div class="my-proyects-container-item">
+            <div class="marca-agua">
+                <a href="{{site.link}}" class="btn" target="_blank">{{buttonSeeProject}}</a>
+            </div>
+                <img src="{{site.picture}}" alt="{{site.name}}" title="{{site.name}}" loading="lazy">
+           </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,73 @@
+<div class="header-information">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" section="#intro"><i class="fas fa-terminal"></i> {{name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <div class= "my-2 my-lg-0 options-menu">
+            <div class="select-box">
+                <div class="select" id="language">
+                    <div class="content-select">
+                       <div class="option-content" *ngIf="language == 'es-ES' ">
+                          <img src="{{spanishIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{spanish}}</span>
+                          </div>
+                       </div>
+
+                       <div class="option-content" *ngIf="language == 'pt-BR' " >
+                          <img src="{{portugueseIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{portuguese}}</span>
+                          </div>
+                        </div>
+
+                        <div class="option-content" *ngIf="language == 'en-US' " >
+                          <img src="{{englishIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{english}}</span>
+                          </div>
+                        </div>
+
+
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="options" id="options">
+                    <a href="javascript::" class="option" lang="es-ES" *ngIf="language != 'es-ES' ">
+                      <div class="option-content">
+                          <img src="{{spanishIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{spanish}}</span>
+                          </div>
+                      </div>
+                    </a>
+                    <a href="javascript::" class="option" lang="pt-BR" *ngIf="language != 'pt-BR' ">
+                      <div class="option-content">
+                          <img src="{{portugueseIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{portuguese}}</span>
+                          </div>
+                      </div>
+                    </a>
+                    <a href="javascript::" class="option" lang="en-US" *ngIf="language != 'en-US' ">
+                      <div class="option-content">
+                          <img src="{{englishIcone}}" alt="" class="icone">
+                          <div class="content-text">
+                            <span class="title">{{english}}</span>
+                          </div>
+                      </div>
+                    </a>
+                </div>
+            </div>
+            <span class="city"> <i class="fas fa-map-marker-alt"></i> {{location}}</span>
+          </div>
+        </div>
+    </nav>
+</div>
+
+

@@ -1,0 +1,111 @@
+
+
+.header-information{
+    position: fixed;
+    z-index: 199;
+    width: 100%;
+
+    .nav-item{
+        cursor: pointer;
+    }
+
+    .select-box{
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+
+        .select{
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .content-select {
+                display: inline-block;
+                margin-right: 20px;
+
+                .title{
+                    font-weight: 500;
+                    color: #292668;
+                }
+            }
+
+            .fas{
+                display: inline-block;
+                float: right;
+                color: #292668;
+                position: absolute;
+                right: 8px;
+                top: 17px;
+            }
+
+            .fa-chevron-up{
+                display: none;
+            }
+        }
+
+        .options{
+            position: absolute;
+            width: 150px;
+            background: #fff;
+            margin-top: 8px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 15px;
+            display: none;
+            .option{
+                margin-bottom: 10px;
+                width: 100%;
+                display: block;
+                text-decoration: none;
+                padding: 10px;
+                transition: .2s all;
+
+                &:hover{
+                    background: rgb(55, 35, 102);
+
+                    .title{
+                        color: #fff !important;
+                    }
+                }
+                
+            }
+
+            .active{
+                display: none !important;
+            }
+        }
+
+        .option-content{
+            width: 100%;
+            display: flex;
+            .icone{
+               width: 30px;
+               margin-right: 10px;
+            }
+
+            .content-text{
+                display: flex;
+                align-items: center;
+                .title{
+                    color: #1e1f41;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        
+    }
+
+    .city{
+        color: #fff;
+    }
+
+    .options-menu{
+        display: flex;
+        align-items: center;
+    }
+
+}

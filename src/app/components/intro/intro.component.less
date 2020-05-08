@@ -1,0 +1,144 @@
+.intro{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    padding-top: 90px;
+
+    .photo-contain{
+        width: 80%;
+        margin: auto;
+        height: 110px;
+        .photo{
+            background: #ffffff;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-image: url('../../../assets/midia/marlon.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            margin: auto;
+            position: relative;
+            top: -15px;
+        }
+       
+    }
+
+    .intro-cont{
+        width: 60%;
+        background: #fff;
+        height: 520px;
+        margin: auto;
+        border-radius: 12px;
+        padding: 25px;
+        padding-top: 130px;
+
+        .btn-cv{
+            background: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            margin-right: 17px;
+            display: table;
+            margin: auto;
+    
+            .far {
+                margin-right: 5px;
+            }
+    
+            &:hover{
+                background: #b2aeae;
+            }
+        }
+
+        .title{
+            text-align: center;
+        }
+
+        .name{
+            color: #2a0b83bd;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .description{
+            color: #726e6e;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .social{
+            .social-network{
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+
+                .social-item{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    padding: 5px;
+                    margin-left: 10px;
+                    border-radius: 50%;
+                    background: #5151d5;
+                    border: 2px solid #5151d5;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: transparent;
+                        transition: all 0.5s;
+                        a{
+                            color:#5151d5;
+                        }
+                    }
+
+                    a{
+                        color: white;
+                        text-align: center;
+                        position: relative;
+                        left: 4px;
+                        top: -4px;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width:700px) and (max-width:1024px){
+        .intro-cont{
+            width: 90%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        padding-bottom: 20px;
+        .photo-contain{
+            .photo{
+                width: 200px;
+                height: 200px;
+                top: 24px;
+            }
+        }
+
+        .title{
+            font-size: 29px;
+        }
+
+        .name{
+            font-size: 20px !important;
+        }
+
+        .description{
+            font-size: 12px !important;
+        }
+        
+    
+        .intro-cont{
+            width: 100%;
+            height: auto;
+        }
+        
+    }
+}
+

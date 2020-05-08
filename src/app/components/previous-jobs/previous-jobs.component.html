@@ -1,0 +1,21 @@
+<div class="previos-jobs">
+    <ul class="jobs-list">
+        <li class="jobs-item" *ngFor="let job of jobs">
+            <div class="circle">
+                <div class="center"></div>
+            </div>
+            <div class="line"></div>
+            <div class="job">
+                <h3 class="job-tilte">{{job.title}}</h3>
+                <p class="job-company">{{job.company}}</p>
+                <span class="job-location">{{job.location}}</span>
+                <br>
+                <span class="job-date">{{job.date}}</span>
+                <p class="job-description">{{job.description}}</p>
+            </div>
+        </li>
+    </ul>
+    <p class="seemore">
+        <span class="seemore-button">{{seeMoreButton}}<i class="fas fa-chevron-down"></i></span>
+    </p>
+</div>

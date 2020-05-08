@@ -1,0 +1,82 @@
+<section class="intro-section">
+  <header>
+      <app-personal-information></app-personal-information>
+      <app-intro></app-intro>
+  </header>
+</section>
+<section class="main">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                     <app-category-title [title]="'Portafolios'" [subtitle]="'MIS TRABAJOS'" [contrast]=" 'false' " *ngIf = "language == 'es-ES' "></app-category-title>
+                     <app-category-title [title]="'Portfólios'" [subtitle]="'MEUS TRABALHOS'" [contrast]=" 'false' " *ngIf = "language == 'pt-BR' "></app-category-title>
+                     <app-category-title [title]="'Briefcase'" [subtitle]="'MY JOBS'" [contrast]=" 'false' " *ngIf = "language == 'en-US' "></app-category-title>
+                </div>
+            </div>
+        </div>
+        <app-proyects></app-proyects>
+    </section>
+    <section class="contrast">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <app-category-title [title]="'Habilidades'" [subtitle]="'PROFESIONALES'" [contrast]=" 'true' " *ngIf = "language == 'es-ES' "></app-category-title>
+                    <app-category-title [title]="'Habilidades'" [subtitle]="'PROFISSIONAIS'" [contrast]=" 'true' " *ngIf = "language == 'pt-BR' "></app-category-title>
+                    <app-category-title [title]="'Skills'" [subtitle]="'PROFESSIONALS'" [contrast]=" 'true' " *ngIf = "language == 'en-US' "></app-category-title>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <app-abilities></app-abilities>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <app-category-title [title]="'Experiencia'" [subtitle]="'TRABAJOS PREVIOS'" [contrast]=" 'false' " *ngIf = "language == 'es-ES' "></app-category-title>
+                    <app-category-title [title]="'Experiência'" [subtitle]="'TRABALHOS ANTERIORES'" [contrast]=" 'false' " *ngIf = "language == 'pt-BR' "></app-category-title>
+                    <app-category-title [title]="'Experience'" [subtitle]="'PREVIOUS JOBS'" [contrast]=" 'false' " *ngIf = "language == 'en-US' "></app-category-title>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <app-previous-jobs></app-previous-jobs>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contrast">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <app-category-title [title]="'Educación'" [subtitle]="'CARRERA ACADÉMICA'" [contrast]=" 'true' " *ngIf = "language == 'es-ES' " ></app-category-title>
+                    <app-category-title [title]="'Educação'" [subtitle]="'CARREIRA ACADÊMICA'" [contrast]=" 'true' " *ngIf = "language == 'pt-BR' "></app-category-title>
+                    <app-category-title [title]="'Education'" [subtitle]="'ACADEMIC CAREER'" [contrast]=" 'true' " *ngIf = "language == 'en-US' " ></app-category-title>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <app-education></app-education>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <app-category-title [title]="'Información'" [subtitle]="'PERSONAL'" [contrast]=" 'false' " *ngIf = "language == 'es-ES' " ></app-category-title>
+                    <app-category-title [title]="'Informação'" [subtitle]="'PESSOAL'" [contrast]=" 'false' " *ngIf = "language == 'pt-BR' "></app-category-title>
+                    <app-category-title [title]="'information'" [subtitle]="'PERSONAL'" [contrast]=" 'false' " *ngIf = "language == 'en-US' " ></app-category-title>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <app-lenguaje></app-lenguaje>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<footer>
+    <p class="mensagem">{{name}} © {{year}} {{footerComplement}}</p>
+</footer>
+
+
+

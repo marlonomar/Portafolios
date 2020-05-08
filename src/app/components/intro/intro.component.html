@@ -1,0 +1,29 @@
+<div class="intro" id="intro">
+    <div class="photo-contain">
+        <div class="photo">
+        </div>
+    </div>
+    <div class="intro-cont">
+        <h1 class="title">{{title}}</h1>
+        <h2 class="name">{{name}}</h2>
+        <p class="description" *ngIf = "language == 'es-ES' "  >Trabajo como  en , desde .
+            He trabajado en matenimiento y desarrollo de plataformas web en el area de aeronautica, servicios de ventas de productos digitales e E-commerce, con plataforma CMS como Liferay e Oracle Commerce Cloud. 
+            Busco colaborar como desarrollador de Javascript ya que recientemente me he certificado en esta
+            tecnología.
+            A nivel front-end con  y/o a nivel back-end con .</p>
+        <div class="social">
+            <ul class="social-network">
+                <li class="social-item">
+                    <a href="{{linkedin}}" title="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="social-item">
+                    <a href="{{github}}" title="github" target="_blank"><i class="fab fa-github-square"></i></a>
+                </li>
+                <li class="social-item">
+                    <a href="tel:{{phone}}" title="+55 (81) 982313-722" ><i class="fab fa-whatsapp-square"></i></a>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-cv" href="{{cv}}" download><i class="far fa-file-alt"></i>{{nameButtonCV}}</a>
+    </div>
+</div>

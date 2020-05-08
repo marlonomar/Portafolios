@@ -1,0 +1,83 @@
+.previos-jobs{
+    .jobs-list{
+        list-style: none;
+        padding: 0;
+        .jobs-item{
+            position: relative;
+            &:nth-child(1n +4){
+                display: none;
+            }
+            .circle{
+                width: 30px;
+                height: 30px;
+                background: #0089ff85;
+                border-radius: 50%;
+                position: relative;
+                .center{
+                    width: 15px;
+                    height: 15px;
+                    background: #0303d5;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 8px;
+                    left: 7px;
+                }
+            }
+            .line{
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: #d1cdcd;
+                left: 14px;
+            }
+
+            .job{
+                padding-left: 60px;
+                position: relative;
+                top: -30px;
+
+                .job-tilte{
+
+                }
+
+                .job-company{
+                    color: #189be7;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .job-date{
+                    color: #9b9a9a;
+                    font-weight: 400;
+                }
+
+                .job-description{
+                    font-size: 18px;
+                    color: #767676;
+                    font-family: sans-serif;
+                }
+
+                .job-location{
+                    color: #767676e6;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .seemore{
+        text-align: center;
+        .seemore-button{
+            color:#5355a9;;
+            font-size: 19px;
+            cursor: pointer;
+            font-weight: 500;
+            &:hover{
+                color: #0a0d84;
+            }
+            .fas{
+                margin-left: 5px;
+            }
+        }
+    }
+}

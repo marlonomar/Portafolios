@@ -1,0 +1,16 @@
+<div class="education">
+    <ul class="education-list">
+        <li class="education-item" *ngFor="let certification of education">
+            <div class="education-content-info">
+                <h3 class="title"><i class="fas fa-graduation-cap"></i> {{certification.title}}</h3>
+                <span class="data">{{certification.data}}</span>
+                <p class="platform">{{certification.platform}}</p>
+                <a href="{{certification.certificado}}" download class="btn certificado">{{certificate}}</a>
+            </div>
+        </li>
+    </ul>
+    <p class="seemore">
+        <span class="seemore-button">{{seeMoreButton}}<i class="fas fa-chevron-down"></i></span>
+    </p>
+    
+</div>
