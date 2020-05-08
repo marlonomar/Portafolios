@@ -1,0 +1,46 @@
+{
+    "user" : {
+      "completName" : "Marlon Omar Guerrero Garcia",
+      "name" : "Marlon Guerrero" 
+    },
+    "contact" :{
+        "phone" : "+5581982313722",
+        "linkedin" : "https://www.linkedin.com/in/marlon-omar-guerrero-garcia-a7b720176/",
+        "github" : "https://github.com/marlonomar"
+    },
+    "documents" : {
+        "cv" : "https://marlonomar.github.io/portafolios/assets/documents/cv.pdf",
+        "certificates":{
+            
+        }
+    },
+
+    "site" :{
+        "components" : {
+            "buttonNameCV" : "Baixar CV",
+            "buttonSeeProject" : "Visita",
+            "footerComplement" : "Todos os direitos reservados",
+            "seeMoreButton" :"ver mais",
+            "selectLanguages" : "Idioma",
+            "certificate" : "certificado",
+            "allFiltes" : "Tudo",
+            "levels" : {
+                "native" : "Nativo",
+                "Advanced" : "Avançado",
+                "Intermediate" : "Médio",
+                "Beginner" : "Iniciante"
+            }
+        },
+
+        "categorySubTitle" :{
+            "languages":{
+                "title":"línguas"
+            }
+        },
+        "languages":{
+            "spanish" : "espanhol",
+            "portuguese" :"português",
+            "english" : "inglês"
+        }
+    }
+}
