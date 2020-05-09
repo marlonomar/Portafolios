@@ -57,52 +57,75 @@ export class PersonalInformationComponent implements OnInit {
   }
 
   navBar(){
-    var titles = $(".title-category .title");
-    titles.map(function(index,data){
-      if(window.innerWidth <= 500){
-        $(".navbar-nav").append("<li class='nav-item' section='#"+data.innerText+"' data-target='#navbarSupportedContent' data-toggle='collapse' ><a class='nav-link'>"+data.innerText+"</a></li>");
-      }else{
-        $(".navbar-nav").append("<li class='nav-item' section='#"+data.innerText+"'><a class='nav-link'>"+data.innerText+"</a></li>");
-      }
-      
+    var titles = document.querySelectorAll(".title-category .title");
+
+    titles.forEach(function(elem){
+
+        var navbar = document.querySelector('.navbar-nav');
+        var links = "<li class='nav-item pointer' section='#"+elem.textContent+"'><a class='nav-link'>"+elem.textContent+"</a></li>";
+        var linksMobile = "<li class='nav-item pointer' section='#"+elem.textContent+"' data-target='#navbarSupportedContent' data-toggle='collapse' ><a class='nav-link'>"+elem.textContent+"</a></li>";
+        
+        if(window.innerWidth <= 500){
+            navbar.innerHTML += linksMobile;
+        }else{
+            navbar.innerHTML += links;
+        }
+       
     });
 
-    $(".nav-item a , .navbar-brand").css({"cursor":"pointer"})
+   var navElemets = document.querySelectorAll('.nav-item , .navbar-brand ');
 
-    $('.nav-item , .navbar-brand ').on('click',function(e){
-      e.preventDefault();
-      var id = $(this).attr('section');
-      var section = $(id).offset().top;
-      $('html, body').animate({
-        scrollTop: section - 70
-      },500);
-    });
+   navElemets.forEach(function(elem){
+       elem.addEventListener('click',function(e){
+        e.preventDefault();
+        var elem = this;
+        var id = elem.getAttribute('section');
+        console.log(document.querySelector(id).scrollWidth);
+        var section = $(id).offset().top;
+        $('html, body').animate({
+          scrollTop: section - 70
+        },500);
+       });
+   });
 
   }
 
   languagesMenu(){
 
     function menu (){
-        $("#options").toggle('slow');
-        $(".select-box .fa-chevron-up").toggle();
-        $(".select-box .fa-chevron-down").toggle();
+        var optionsMenu = document.querySelector("#options");
+        var arrowUp = document.querySelector(".select-box .fa-chevron-up");
+        var arrowDown = document.querySelector(".select-box .fa-chevron-down");
+
+        if(optionsMenu.classList.contains('visible') && arrowUp.classList.contains('visible')){
+            optionsMenu.classList.remove('visible');
+            arrowUp.classList.remove('visible');
+            arrowDown.classList.add('visible');
+        }else{
+            optionsMenu.classList.add('visible');
+            arrowUp.classList.add('visible');
+            arrowDown.classList.remove('visible');
+        }
     }
 
-    $("#language").click(function(){
-       menu ();
+    var languageButton = document.querySelector("#language");
+
+    languageButton.addEventListener('click',function(){
+        menu ();
     });
 
-    $(".select-box .option").click(function(){
-      $(".select-box .option").removeClass('active');
-      $(this).addClass('active');
-      var lang = $(this).attr('lang');
-      localStorage.setItem('language', lang);
-      menu ();
-      window.location.reload();
-    });
+    var options = document.querySelectorAll(".select-box .option");
 
+    options.forEach(function(elem){
+        elem.addEventListener('click',function(){
+            var lang = this.getAttribute('lang');
+            localStorage.setItem('language', lang);
+            menu ();
+            window.location.reload();
+        });
+    });
+  
   }
-
 
   ngAfterViewInit(){
     this.navBar();
