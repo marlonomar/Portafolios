@@ -78,57 +78,142 @@ export class AbilitiesComponent implements OnInit {
   }
 
   titleSize(){
-    $(".abilities .maincontainer .title").map(function(index,title){
-      var titleLetter =title.innerText.length;
-      if(titleLetter >= 15){
-        $(this).addClass('large')
-      }
-   })
+   
+   var titles = document.querySelectorAll(".abilities .maincontainer .title");
+
+   titles.forEach(function(elem){
+
+        var titleLetter = elem.textContent.length;
+        if(titleLetter >= 15){
+            elem.classList.add('large');
+        }
+   });
     
   }
 
   filter(){
-    var listItem = $(".category-list .category-item");
 
-    listItem.click(function(){
+    var listItem = document.querySelectorAll(".category-list .category-item");
 
-      var thislistItem = $(this);
-      var filterItem = $(".abilities-item");
-      var listItemContainer = $(".abilities");
-      var arrows = $(".arrow");
+    listItem.forEach(function(elem){
 
-      listItem.removeClass('active');
-      thislistItem.addClass('active');
-      filterItem.hide();
+        elem.addEventListener('click',function(){
 
-      if($(this).attr('value') == 'all'){
-        filterItem.show();
-      }else{
-        var thisValeu = thislistItem.attr('value');
-        $("."+thisValeu+"").show();
-      }
+            var thislistItem = this;
+            var filterItem = document.querySelectorAll(".abilities-item");
+            var listItemContainer = document.querySelectorAll(".abilities");
+            var arrows = document.querySelectorAll(".arrow");
+            
+            listItem.forEach(function(elem){
+                elem.classList.remove('active');
+            });
 
-      if($(".abilities-item:visible").length == 1){
-        listItemContainer.addClass('listSingleItem');
-        arrows.hide();
-      }
-      else if($(".abilities-item:visible").length == 2){
-        arrows.hide();
-        listItemContainer.removeClass('listSingleItem');
-      }
-      else{
-        listItemContainer.removeClass('listSingleItem');
-        arrows.show();
-      }
+            thislistItem.classList.add('active');
 
-      if(window.innerWidth > 700){
-        if($(".abilities-item:visible").length == 3){
-          arrows.hide();
-          listItemContainer.removeClass('listSingleItem');
-        }
-      }
+            filterItem.forEach(function(elem){
+                elem.classList.add('hide');
+            });
+          
+            if( thislistItem.getAttribute('value') == 'all'){
 
+                filterItem.forEach(function(elem){
+                    elem.classList.remove('hide');
+                });
+
+            }else{
+
+                var thisValeu = thislistItem.getAttribute('value');
+                var element = document.querySelectorAll("."+thisValeu+"");
+
+                element.forEach(function(elem){
+                    elem.classList.remove('hide');
+                });
+              
+            }
+
+            function isVisible (item){
+
+                var visible = [];
+
+                item.forEach(function(element){
+
+                    if(element.offsetWidth > 0 && element.offsetHeight > 0){
+                        visible.push(element);
+                        return visible;
+                    }
+
+                });
+
+                function hideArrow (){
+                    listItemContainer.forEach(function(elem){
+                        elem.classList.remove('listSingleItem');
+                    });
+
+                    arrows.forEach(function(elem){
+                        elem.classList.add('hide')
+                    });
+                }
+
+                function showArrow(){
+                    
+                    listItemContainer.forEach(function(elem){
+                        elem.classList.remove('listSingleItem');
+                    });
+
+                    arrows.forEach(function(elem){
+                        elem.classList.remove('hide')
+                    });
+                }
+
+                function arrow (){
+
+                    listItemContainer.forEach(function(elem){
+                        elem.classList.add('listSingleItem');
+                    });
+
+                    arrows.forEach(function(elem){
+                        elem.classList.add('hide')
+                    });
+                }
+
+                if(visible.length == 1){
+
+                    arrow ();
+                    
+                }else if ( visible.length == 3 || visible.length == 2){
+
+                    hideArrow ();
+
+                }else{
+                    showArrow();
+                }
+
+                if(window.innerWidth > 700){
+                    
+                    if(visible.length == 3){
+
+                        hideArrow ();
+                    }
+
+                }else{
+
+                    if(visible.length == 3){
+                        showArrow();
+                    }
+
+                    if(visible.length == 2){
+
+                        hideArrow ();
+                    }
+                }
+
+            }
+
+            isVisible (filterItem);
+           
+        });
     });
+
   }
 
   scroll(){
@@ -146,8 +231,6 @@ export class AbilitiesComponent implements OnInit {
       });
 
   }
-
-  
 
   ngOnInit() {  
   }
