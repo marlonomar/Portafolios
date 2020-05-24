@@ -58,6 +58,7 @@ export class AbilitiesComponent implements OnInit {
 
   
   progress(){
+
     var circle = $(".abilities circle");
     circle.map(function(index,circle){
         var radius = circle.r.baseVal.value;
@@ -75,6 +76,8 @@ export class AbilitiesComponent implements OnInit {
 
         setProgress(value);
     })
+    
+
   }
 
   titleSize(){
@@ -217,16 +220,17 @@ export class AbilitiesComponent implements OnInit {
   }
 
   scroll(){
-      var arrowDown = $(".arrow .down");
-      var arrowUp = $(".arrow .up");
+
+      var arrowDown = document.querySelector(".arrow .down");
+      var arrowUp = document.querySelector(".arrow .up");
       var container = $(".abilities-list");
       var time = 4000;
 
-      arrowDown.click(function(){
+      arrowDown.addEventListener('click',function(){
         container.animate({ 'scrollTop': '5000px'}, time);
       });
 
-      arrowUp.click(function(){
+      arrowUp.addEventListener('click',function(){
         container.animate({ 'scrollTop': '0px'}, time);
       });
 

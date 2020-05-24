@@ -6,11 +6,36 @@
     <div class="intro-cont">
         <h1 class="title">{{title}}</h1>
         <h2 class="name">{{name}}</h2>
-        <p class="description" *ngIf = "language == 'es-ES' "  >Trabajo como  en , desde .
-            He trabajado en matenimiento y desarrollo de plataformas web en el area de aeronautica, servicios de ventas de productos digitales e E-commerce, con plataforma CMS como Liferay e Oracle Commerce Cloud. 
-            Busco colaborar como desarrollador de Javascript ya que recientemente me he certificado en esta
-            tecnología.
-            A nivel front-end con  y/o a nivel back-end con .</p>
+        <div class="description-content" *ngIf = "language == 'es-ES' ">
+            <p class="description">Tengo 2 años de experiencia trabajando como Javascript developer en  empresas y startups en brasil.</p>
+
+            <p class="description">He desarrollado páginas web en liferay e oracle commerce cloud en el sector de ecommerce.</p>
+
+            <p class="description">Recientemente me he certificado como desarrollador Javascript con Nodejs (Express) y Angular.</p>
+
+            <p class="description">Busco colaborar como desarrollador en:<br>
+            <strong>liferay</strong> o <strong>angular</strong>.</p>
+        </div>
+        <div class="description-content" *ngIf = "language == 'pt-BR' ">
+            <p class="description">Tenho 2 anos de experiência trabalhando como desenvolvedor Javascript em empresas e startups no Brasil.</p>
+
+            <p class="description">Eu desenvolvi páginas da web usando liferay e oracle commerce cloud no setor de ecommerce.</p>
+
+            <p class="description">Recentemente, me tornei um desenvolvedor Javascript com Nodejs (Express) e Angular.</p>
+
+            <p class="description">Estou procurando colaborar como desenvolvedor em:<br>
+            <strong>liferay</strong> ou <strong>angular</strong>.</p>
+        </div>
+        <div class="description-content" *ngIf = "language == 'en-US' ">
+            <p class="description">I have 2 years of experience working as a Javascript developer in companies and startups in Brazil.</p>
+
+            <p class="description">I have developed web pages in liferay and oracle commerce cloud in the ecommerce sector.</p>
+
+            <p class="description">I have recently become a Javascript developer with Nodejs (Express) and Angular.</p>
+
+            <p class="description">I am looking to collaborate as a developer in:<br>
+            <strong>liferay</strong> and <strong>angular</strong>.</p>
+        </div>
         <div class="social">
             <ul class="social-network">
                 <li class="social-item">

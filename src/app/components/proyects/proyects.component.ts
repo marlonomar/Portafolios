@@ -41,18 +41,17 @@ export class ProyectsComponent implements OnInit {
   slickProyects(){
    $(".my-proyects-list").slick({
       dots:false,
-      infinite: true,
-      slidesToShow: 1,
+      infinite: false,
+      slidesToShow: 1.5,
       slidesToScroll: 1,
       arrows: false,
-      centerMode: false,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      centerMode: true,
       responsive: [
         {
-          breakpoint: 500,
+          breakpoint: 568,
           settings: {
-            slidesToShow: 1.05
+            slidesToShow: 1,
+            centerMode: false
           }
   
         }]
@@ -63,7 +62,7 @@ export class ProyectsComponent implements OnInit {
   }
 
   ngAfterViewInit(){
-    //this.slickProyects();
+    this.slickProyects();
   }
 
 }
