@@ -31,7 +31,6 @@ export class ProyectsComponent implements OnInit {
     this.proyects = [
       new Proyect ('Pokemon Battle',route+'pokemon.PNG','https://website-pokebattle.herokuapp.com/','simples'),
       new Proyect ('Cafeteria Guerrero',route+'cafeteria.PNG','https://marlonomar.github.io/cafeteria/','simples'),
-      new Proyect ('Cafeteria Guerrero',route+'cafeteria.PNG','https://marlonomar.github.io/cafeteria/','simples'),
       new Proyect ('Formulario Venezuela',route+'formulario.PNG','https://marlonomar.github.io/formulario-ve/','simples'),
       new Proyect ('Lista de Usuarios',route+'lista-usuarios.PNG','https://marlonomar.github.io/lista-de-usuarios/','simples')
     ];
