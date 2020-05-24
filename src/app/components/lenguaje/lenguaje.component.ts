@@ -39,15 +39,38 @@ export class LenguajeComponent implements OnInit {
       this.Beginner = this.data.site.components.levels.Beginner;
     })
 
-    var route = 'https://marlonomar.github.io/portafolios/assets/banderas/';
-    this.lenguaje = [
-      new Lenguaje ('Español',100,route+'espanha.jpg','espanha'),
-      new Lenguaje ('Portugues',80,route+'brazil.png','brazil'),
-      new Lenguaje ('Ingles',20,route+'eeuu.jpg','eeuu')
-    ];
+    
+
   }
 
   ngOnInit() {
+
+    var route = 'https://marlonomar.github.io/portafolios/assets/banderas/';
+
+    if(this.language == 'es-ES'){
+      this.lenguaje = [
+        new Lenguaje ('Español',100,route+'espanha.jpg','espanha'),
+        new Lenguaje ('Portugues',80,route+'brazil.png','brazil'),
+        new Lenguaje ('Inglés',20,route+'eeuu.jpg','eeuu')
+      ];
+    }
+
+    if(this.language == 'pt-BR'){
+      this.lenguaje = [
+        new Lenguaje ('Espanhol',100,route+'espanha.jpg','espanha'),
+        new Lenguaje ('Português',80,route+'brazil.png','brazil'),
+        new Lenguaje ('Inglês',20,route+'eeuu.jpg','eeuu')
+      ];
+    }
+
+    if(this.language == 'en-US'){
+      this.lenguaje = [
+        new Lenguaje ('Spanish',100,route+'espanha.jpg','espanha'),
+        new Lenguaje ('Portuguese',80,route+'brazil.png','brazil'),
+        new Lenguaje ('English',20,route+'eeuu.jpg','eeuu')
+      ];
+    }
+
   }
 
   progress(){
