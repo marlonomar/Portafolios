@@ -38,6 +38,8 @@ export class IntroComponent implements OnInit {
     var routeJson = "https://marlonomar.github.io/portafolios/assets/json/";
 
     this.language = localStorage.getItem('language');
+
+    this.cv = "https://marlonomar.github.io/portafolios/assets/documents/marlonGuerrero-"+this.language+".pdf";
     
     http.get(routeJson + this.language +'.json').subscribe(resp =>{
 
@@ -47,7 +49,6 @@ export class IntroComponent implements OnInit {
       this.phone = this.data.contact.phone;
       this.linkedin = this.data.contact.linkedin;
       this.github = this.data.contact.github;
-      this.cv = this.data.documents.cv;
       this.nameButtonCV = this.data.site.components.buttonNameCV;
 
   });
@@ -55,6 +56,8 @@ export class IntroComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log(this.cv)
   }
 
 }
