@@ -56,8 +56,6 @@ export class IntroComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    console.log(this.cv)
   }
 
 }
