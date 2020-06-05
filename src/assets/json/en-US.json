@@ -46,85 +46,85 @@
     "skills":[
         {
         "name" : "Liferay",
-        "picture" : "liferay.png",
+        "picture" : "https://marlonomar.github.io/portafolios/assets/logos/liferay.png",
         "category" : "cms frontend",
         "study":75
         },
         {
             "name" : "Angular",
-            "picture" : "angular.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/angular.png",
             "category" : "frontend framework",
             "study":60
         },
         {
             "name" : "Node JS",
-            "picture" : "nodejs.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/nodejs.png",
             "category" : "Backend",
             "study":45
         },
         {
             "name" : "Oracle Commerce Cloud",
-            "picture" : "oracle.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/oracle.png",
             "category" : "cms frontend",
             "study":51
         },
         {
             "name" : "Javascript",
-            "picture" : "javascript.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/javascript.png",
             "category" : "frontend",
             "study":78
         },
         {
             "name" : "Jquery",
-            "picture" : "jquery.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/jquery.png",
             "category" : "frontend",
             "study":90
         },
         {
             "name" : "Git",
-            "picture" : "git.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/git.png",
             "category" : "versions",
             "study":66
         },
         {
             "name" : "CSS 3",
-            "picture" : "css3.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/css3.png",
             "category" : "frontend",
             "study":95
         },
         {
             "name" : "Bootstrap",
-            "picture" : "bootstrap.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/bootstrap.png",
             "category" : "frontend",
             "study":87
         },
         {
             "name" : "HTML 5",
-            "picture" : "html5.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/html5.png",
             "category" : "frontend",
             "study":95
         },
         {
             "name" : "LESS",
-            "picture" : "less.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/less.png",
             "category" : "frontend",
             "study":50
         },
         {
             "name" : "Typescript",
-            "picture" : "typescript.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/typescript.png",
             "category" : "frontend",
             "study":35
         },
         {
             "name" : "Mongo DB",
-            "picture" : "mongodb.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/mongodb.png",
             "category" : "dataBase",
             "study":45
         },
         {
             "name" : "Wordpress",
-            "picture" : "wordpress.png",
+            "picture" : "https://marlonomar.github.io/portafolios/assets/logos/wordpress.png",
             "category" : "frontend cms",
             "study":8
         }

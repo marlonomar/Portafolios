@@ -34,33 +34,23 @@ export class AbilitiesComponent implements OnInit {
       this.Advanced = this.data.site.components.levels.Advanced;
       this.Intermediate = this.data.site.components.levels.Intermediate;
       this.Beginner = this.data.site.components.levels.Beginner;
-    });
 
-    var route = 'https://marlonomar.github.io/portafolios/assets/logos/';
-    this.abilities =[
-      
-      new Abilitie('Liferay',route +'liferay.png','cms frontend',75),
-      new Abilitie("Angular",route + 'angular.png','frontend framework',60),
-      new Abilitie('Node JS',route +'nodejs.png','Backend',45),
-      new Abilitie('Oracle Commerce Cloud',route +'oracle.png','cms frontend',51),
-      new Abilitie('Javascript',route +'javascript.png','frontend',78),
-      new Abilitie('Jquery',route +'jquery.png','frontend',90),
-      new Abilitie('Git',route +'git.png','versions',66),
-      new Abilitie('CSS 3',route +'css3.png','frontend',95),
-      new Abilitie('Bootstrap',route +'bootstrap.png','frontend',87),
-      new Abilitie('HTML 5',route +'html5.png','frontend',95),
-      new Abilitie('LESS',route +'less.png','frontend',50),
-      new Abilitie('Typescript',route +'typescript.png','frontend',35),
-      new Abilitie('Mongo DB',route +'mongodb.png','dataBase',45),
-      new Abilitie('Wordpress',route +'wordpress.png','frontend cms',8)
-    ];
+      var skills = this.data.skills;
+    
+      this.abilities = [];
+
+      for (let i = 0; i < skills.length; i++) {
+        this.abilities.push(new Abilitie(skills[i].name, skills[i].picture , skills[i].category , skills[i].study ))
+      }
+
+    });
 
   }
 
   
   progress(){
-
     var circle = $(".abilities circle");
+    console.log(circle)
     circle.map(function(index,circle){
         var radius = circle.r.baseVal.value;
         var circumference = radius * 2 * Math.PI;
@@ -238,13 +228,15 @@ export class AbilitiesComponent implements OnInit {
   }
 
   ngOnInit() {  
+    
   }
 
   ngAfterViewInit(){
     this.titleSize();
-    this.progress();
     this.filter();
     this.scroll();
+    this.progress();
+    
   }
 
 
