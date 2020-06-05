@@ -42,4 +42,91 @@
             "english" : "English"
         }
     }
+    ,
+    "skills":[
+        {
+        "name" : "Liferay",
+        "picture" : "liferay.png",
+        "category" : "cms frontend",
+        "study":75
+        },
+        {
+            "name" : "Angular",
+            "picture" : "angular.png",
+            "category" : "frontend framework",
+            "study":60
+        },
+        {
+            "name" : "Node JS",
+            "picture" : "nodejs.png",
+            "category" : "Backend",
+            "study":45
+        },
+        {
+            "name" : "Oracle Commerce Cloud",
+            "picture" : "oracle.png",
+            "category" : "cms frontend",
+            "study":51
+        },
+        {
+            "name" : "Javascript",
+            "picture" : "javascript.png",
+            "category" : "frontend",
+            "study":78
+        },
+        {
+            "name" : "Jquery",
+            "picture" : "jquery.png",
+            "category" : "frontend",
+            "study":90
+        },
+        {
+            "name" : "Git",
+            "picture" : "git.png",
+            "category" : "versions",
+            "study":66
+        },
+        {
+            "name" : "CSS 3",
+            "picture" : "css3.png",
+            "category" : "frontend",
+            "study":95
+        },
+        {
+            "name" : "Bootstrap",
+            "picture" : "bootstrap.png",
+            "category" : "frontend",
+            "study":87
+        },
+        {
+            "name" : "HTML 5",
+            "picture" : "html5.png",
+            "category" : "frontend",
+            "study":95
+        },
+        {
+            "name" : "LESS",
+            "picture" : "less.png",
+            "category" : "frontend",
+            "study":50
+        },
+        {
+            "name" : "Typescript",
+            "picture" : "typescript.png",
+            "category" : "frontend",
+            "study":35
+        },
+        {
+            "name" : "Mongo DB",
+            "picture" : "mongodb.png",
+            "category" : "dataBase",
+            "study":45
+        },
+        {
+            "name" : "Wordpress",
+            "picture" : "wordpress.png",
+            "category" : "frontend cms",
+            "study":8
+        }
+    ]
 }

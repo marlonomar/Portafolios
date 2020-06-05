@@ -3,7 +3,6 @@ export class Abilitie {
         public name :string,
         public picture : any,
         public category : string,
-        public study : number,
-        public description : string
+        public study : number
     ){}
 }
